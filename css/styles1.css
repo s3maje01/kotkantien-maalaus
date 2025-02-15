@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { /* sivun peruspohja */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* taustakuvan asetukset*/
+    background-image: url('../images/taustakuva.jpg'); /* Taustakuva */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center; /* otsikko keskelle */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul { /* ulkoasu navigaatiolle */
+    list-style: none;
+    display: flex;
+    justify-content: center; /* linkit keskelle */
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a { /* Linkkien tyylit */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover { /* Linkkien efekti */
+    color: #f4b400;
+}
+
+/* pääsisältö */
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.text-section { /* Tekstiosion tyylit */
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Pyöristetyt reunat */
+}
+
+/* Kuvien tyylit */
+.text-section img {
+    max-width: 100%;
+    height: auto; /* Säilyttää kuvan mittasuhteen */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer { /* footer */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) { /* Responsiivisuus: alle 768px leveyksillä */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .text-section { /* Pienentää tekstilaatikoiden sisämarginaaleja */
+        padding: 1rem;
+    }
+
+    .text-section img { /* Lisää ylätilaa kuville pienillä näytöillä */
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+}

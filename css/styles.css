@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* sivun peruspohja */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('../images/taustakuva.jpg'); /* taustakuva */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header { 
+    background-color: rgba(0, 0, 0, 0.7); /* Läpinäkyvä tumma tausta */
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 { /* Otsikon tyyli */
+    margin-bottom: 0.5rem;
+}
+
+nav ul { /* Navigaation perus */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li { /* Navigaation linkkien marginaalit */
+    margin: 0 1rem;
+}
+
+nav ul li a { /* navigointilinkkien muotoilu */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #f4b400; /* väri kun hiiri on linkin kohdalla */
+}
+
+main { /* pääsisältö */
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* tekstiosiot */
+.text-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) { /* Responsiivinen navigaatio */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
